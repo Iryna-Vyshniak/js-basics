@@ -1,43 +1,237 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS BASICS</title>
-</head>
-<body class="bg-gray-100 text-gray-800 font-sans leading-relaxed p-4 md:p-8">
+    <head>
+        <meta charset="UTF-8">
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        >
+        <title>JS BASICS</title>
+    </head>
+    <body
+        data-page="home"
+        class="bg-gray-100 text-gray-800 font-sans leading-relaxed"
+    >
 
-    <header class="max-w-4xl mx-auto mb-8">
-        <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Основи JS</h1>
-        <p class="text-gray-600">Інтерактивне розв'язання задач</p>
-    </header>
+        <header class="sticky top-0 z-40 w-full border-b border-gray-200/50 bg-white/95 supports-[backdrop-filter]:bg-white/70 supports-[backdrop-filter]:backdrop-blur-md mb-8">
 
-    <main class="max-w-4xl mx-auto">
-        <section aria-labelledby="minimum-heading" class="section-card">
-            <h2 id="minimum-heading" class="text-2xl font-semibold mb-4 border-b pb-2">Рівень: Мінімум</h2>
-            <div class="code-block whitespace-pre">
+            <div class="max-w-4xl mx-auto w-full flex justify-between items-start px-4 md:px-8 py-4">
+
+                <div class="flex flex-col w-full max-w-md">
+                    <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Основи JS</h1>
+
+                    <div class="mb-2">
+                        <button
+                            type="button"
+                            id="btn-materials"
+                            class="group flex items-center gap-1 text-sm md:text-base font-medium text-blue-700 hover:text-blue-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 rounded-sm transition-colors"
+                            aria-expanded="false"
+                            aria-controls="materials-content"
+                        >
+                            Корисні матеріали
+                            <svg
+                                class="w-4 h-4 transition-transform duration-300 group-aria-expanded:-rotate-180"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M19 9l-7 7-7-7"
+                                ></path>
+                            </svg>
+                        </button>
+
+                        <div
+                            id="materials-content"
+                            class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-in-out"
+                        >
+                            <div class="overflow-hidden">
+                                <ul class="py-2 mt-1 border-l-2 border-blue-200 pl-3">
+                                    <li>
+                                        <a
+                                            href="https://unibreakfast.github.io/five-levels-by-gemini/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                            5 levels of thinking as a programmer
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://unibreakfast.github.io/free-code-camp-responsive-web-design-14-technical-documentation/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                            JavaScript Tokens Expressions Statements
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a
+                                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                            JavaScript Guide (MDN)
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://uk.javascript.info/first-steps"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                            Основи JavaScript
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://uk.javascript.info/script-async-defer"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                            Скрипти: async, defer
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-gray-600 m-0 text-sm md:text-base">Практичне розв'язання задач</p>
+                </div>
+
+                <button
+                    id="btn-burger"
+                    type="button"
+                    class="p-2 mt-1 text-gray-600 shrink-0 hover:text-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 rounded-md transition-colors"
+                    aria-label="Відкрити меню навігації"
+                    aria-expanded="false"
+                    aria-controls="nav-modal"
+                >
+                    <svg
+                        class="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"
+                        ></path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <dialog
+            id="nav-modal"
+            class="dialog-dropdown bg-white p-0 shadow-xl border-0"
+        >
+            <div class="max-w-5xl mx-auto w-full">
+                <div class="py-4 px-4 sm:px-6 border-b flex justify-between items-center bg-gray-50">
+                    <h2 class="text-lg font-bold text-gray-800">Навігація</h2>
+                    <button
+                        id="btn-close-modal"
+                        class="p-2 -mr-2 text-gray-500 hover:text-red-500 transition-colors rounded-md focus-visible:ring-2 focus-visible:ring-red-500 focus:outline-none"
+                        aria-label="Close menu"
+                    >
+                        <svg
+                            class="w-6 h-6"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"
+                            ></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <nav
+                    class="py-4 px-4 sm:px-6"
+                    aria-label="Modal navigation"
+                >
+                    <ul class="space-y-2">
+                        <li>
+                            <a
+                                href="/"
+                                class="block p-4 border rounded hover:border-primary hover:bg-primary-50 transition-colors focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                            >
+                                <span class="font-bold block">Основи JS</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/src/pages/basics-data-types.html"
+                                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                                aria-current="page"
+                            >
+                                <span class="font-bold block text-primary-800">Типи даних та оператори</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </dialog>
+
+        <main class="max-w-4xl mx-auto">
+            <section
+                aria-labelledby="minimum-heading"
+                class="section-card"
+            >
+                <h2
+                    id="minimum-heading"
+                    class="text-2xl font-semibold mb-4 border-b pb-2"
+                >Рівень: Мінімум</h2>
+                <div class="code-block whitespace-pre-wrap break-words">
 // 1. Способи підключення JS до HTML:
-//    - Вбудований (Inline): &lt;button onclick="alert('Hi')"&gt;
-//    - Внутрішній (Internal): &lt;script&gt; /* код */ &lt;/script&gt;
-//    - Зовнішній (External): &lt;script src="main.js"&gt;&lt;/script&gt;
+// - Вбудований (Inline): &lt;button onclick="alert('Hi')"&gt;
+// - Внутрішній (Internal): &lt;script&gt; /* код */ &lt;/script&gt;
+// - Зовнішній (External):
+// &lt;script src="main.js"&gt;&lt;/script&gt;
+// &lt;script defer src="main.js"&gt;&lt;/script&gt;
+// &lt;script async src="main.js"&gt;&lt;/script&gt;
 
 // 2. Змінні для імені та прізвища:
-let userNameSurname = "Флетчер Сілвер";
-const userFullName = "Флетчер Сілвер";
-let clientFullName = "Флетчер Сілвер";
-const accountNameAndSurname = "Флетчер Сілвер";
+let userNameSurname = "Fletcher Silver";
+const userFullName = "Fletcher Silver";
+let clientFullName = "Fletcher Silver";
+const accountNameAndSurname = "Fletcher Silver";
 
 // Неправильні імена (закоментовані):
 // let 1userName = "Fletcher"; // Починається з цифри
 // let user-name = "Fletcher"; // Містить дефіс
-// let let = "Fletcher";       // Використання зарезервованого слова
+// let let = "Fletcher"; // Використання зарезервованого слова
 // let user name = "Fletcher"; // Містить пробіл
 // let @username = "Fletcher"; // Недопустимий символ @
 
 // 3. Способи коментування:
 // Однорядковий коментар починається з двох слешів
 /* Багаторядковий коментар
-   знаходиться між цими символами
+знаходиться між цими символами
 */
 
 // 4. Стилі написання імен змінних:
@@ -45,70 +239,176 @@ const accountNameAndSurname = "Флетчер Сілвер";
 // - PascalCase (для класів та конструкторів: MyClassName)
 // - snake_case (іноді використовується для даних з БД: my_variable_name)
 // - UPPER_SNAKE_CASE (для констант: MAX_VALUE)
-            </div>
-        </section>
+                </div>
+            </section>
 
-        <section aria-labelledby="normal-heading" class="section-card">
-            <h2 id="normal-heading" class="text-2xl font-semibold mb-4 border-b pb-2">Рівень: Норма</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <article>
-                    <h3 class="font-medium mb-2">1. Привітання користувача</h3>
-                    <form id="form-greet" class="space-y-3" novalidate>
-                        <div>
-                            <label for="user-name" class="block text-sm font-medium text-gray-700">Ваше ім'я:</label>
-                            <input type="text" id="user-name" class="input-field" placeholder="Наприклад, Флетчер Сілвер" required>
-                        </div>
-                        <button type="submit" class="btn-primary">Привітатися</button>
-                    </form>
-                    <div id="result-greet" class="result-box" aria-live="polite">Очікування вводу...</div>
-                </article>
+            <section
+                aria-labelledby="normal-heading"
+                class="section-card"
+            >
+                <h2
+                    id="normal-heading"
+                    class="text-2xl font-semibold mb-4 border-b pb-2"
+                >Рівень: Норма</h2>
 
-                <article>
-                    <h3 class="font-medium mb-2">2. Розрахунок віку</h3>
-                    <form id="form-age" class="space-y-3" novalidate>
-                        <div>
-                            <label for="birth-year" class="block text-sm font-medium text-gray-700">Рік народження:</label>
-                            <input type="number" id="birth-year" class="input-field" placeholder="Наприклад, 1995" min="1900" max="2026" step="1" required>
-                        </div>
-                        <button type="submit" class="btn-primary">Порахувати вік</button>
-                    </form>
-                    <div id="result-age" class="result-box" aria-live="polite">Очікування вводу...</div>
-                </article>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <article>
+                        <h3 class="font-medium mb-2">1. Привітання користувача</h3>
+                        <form
+                            id="form-greet"
+                            class="space-y-3"
+                            novalidate
+                        >
+                            <div>
+                                <label
+                                    for="user-name"
+                                    class="block text-sm font-medium text-gray-700"
+                                >Ваше ім'я:</label>
+                                <input
+                                    type="text"
+                                    name='user_name'
+                                    id="user-name"
+                                    class="input-field"
+                                    placeholder="Наприклад, Флетчер Сілвер"
+                                    required
+                                >
+                            </div>
+                            <button
+                                type="submit"
+                                class="btn-primary"
+                            >Привітатися</button>
+                        </form>
+                        <div
+                            id="result-greet"
+                            class="result-box"
+                            aria-live="polite"
+                        >Очікування вводу...</div>
+                    </article>
 
-                <article class="md:col-span-2">
-                    <h3 class="font-medium mb-2">3. Периметр квадрата</h3>
-                    <form id="form-square" class="space-y-3 max-w-md" novalidate>
-                        <div>
-                            <label for="square-side" class="block text-sm font-medium text-gray-700">Довжина сторони (см):</label>
-                            <input type="number" id="square-side" class="input-field" placeholder="Наприклад, 5" min="0" step="0.1" required>
-                        </div>
-                        <button type="submit" class="btn-primary">Обчислити периметр</button>
-                    </form>
-                    <div id="result-square" class="result-box max-w-md" aria-live="polite">Очікування вводу...</div>
-                </article>
-            </div>
-        </section>
+                    <article>
+                        <h3 class="font-medium mb-2">2. Розрахунок віку</h3>
+                        <form
+                            id="form-age"
+                            class="space-y-3"
+                            novalidate
+                        >
+                            <div>
+                                <label
+                                    for="birth-year"
+                                    class="block text-sm font-medium text-gray-700"
+                                >Рік народження:</label>
+                                <input
+                                    type="number"
+                                    name="birth_year"
+                                    id="birth-year"
+                                    class="input-field"
+                                    placeholder="Наприклад, 1995"
+                                    min="1900"
+                                    max="2026"
+                                    step="1"
+                                    required
+                                >
+                            </div>
+                            <button
+                                type="submit"
+                                class="btn-primary"
+                            >Порахувати вік</button>
+                        </form>
+                        <div
+                            id="result-age"
+                            class="result-box"
+                            aria-live="polite"
+                        >Очікування вводу...</div>
+                    </article>
 
-        <section aria-labelledby="max-heading" class="section-card">
-            <h2 id="max-heading" class="text-2xl font-semibold mb-4 border-b pb-2">Рівень: Максимум</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <article>
-                    <h3 class="font-medium mb-2">3. Конвертер валют</h3>
-                    <form id="form-currency" class="space-y-3" novalidate>
-                        <div>
-                            <label for="usd-amount" class="block text-sm font-medium text-gray-700">Сума в доларах (USD):</label>
-                            <input type="number" id="usd-amount" class="input-field" placeholder="Наприклад, 100" min="0" step="0.01" required>
-                        </div>
-                        <button type="submit" class="btn-primary">Конвертувати в EUR</button>
-                    </form>
-                    <div id="result-currency" class="result-box" aria-live="polite">Очікування вводу...</div>
-                </article>
-            </div>
-        </section>
-    </main>
+                    <article class="md:col-span-2">
+                        <h3 class="font-medium mb-2">3. Периметр квадрата</h3>
+                        <form
+                            id="form-square"
+                            class="space-y-3 max-w-md"
+                            novalidate
+                        >
+                            <div>
+                                <label
+                                    for="square-side"
+                                    class="block text-sm font-medium text-gray-700"
+                                >Довжина сторони (см):</label>
+                                <input
+                                    type="number"
+                                    name="square_side"
+                                    id="square-side"
+                                    class="input-field"
+                                    placeholder="Наприклад, 5"
+                                    min="0"
+                                    step="0.1"
+                                    required
+                                >
+                            </div>
+                            <button
+                                type="submit"
+                                class="btn-primary"
+                            >Обчислити периметр</button>
+                        </form>
+                        <div
+                            id="result-square"
+                            class="result-box max-w-md"
+                            aria-live="polite"
+                        >Очікування вводу...</div>
+                    </article>
+                </div>
+            </section>
 
-    <script type="module" src="/src/js/main.js"></script>
-</body>
+            <section
+                aria-labelledby="max-heading"
+                class="section-card"
+            >
+                <h2
+                    id="max-heading"
+                    class="text-2xl font-semibold mb-4 border-b pb-2"
+                >Рівень: Максимум</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <article>
+                        <h3 class="font-medium mb-2">3. Конвертер валют</h3>
+                        <form
+                            id="form-currency"
+                            class="space-y-3"
+                            novalidate
+                        >
+                            <div>
+                                <label
+                                    for="usd-amount"
+                                    class="block text-sm font-medium text-gray-700"
+                                >Сума в доларах (USD):</label>
+                                <input
+                                    type="number"
+                                    name="usd_amount"
+                                    id="usd-amount"
+                                    class="input-field"
+                                    placeholder="Наприклад, 100"
+                                    min="0"
+                                    step="0.01"
+                                    required
+                                >
+                            </div>
+                            <button
+                                type="submit"
+                                class="btn-primary"
+                            >Конвертувати в EUR</button>
+                        </form>
+                        <div
+                            id="result-currency"
+                            class="result-box"
+                            aria-live="polite"
+                        >Очікування вводу...</div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <script
+            type="module"
+            src="/src/js/main.js"
+        ></script>
+    </body>
 </html>
