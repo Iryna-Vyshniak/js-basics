@@ -28,10 +28,37 @@
   }
 
   .result-box {
-    @apply mt-4 p-4 bg-blue-50 border-l-4 border-primary rounded-md min-h-[3.5rem] text-gray-800;
+    @apply mt-4 p-4 bg-blue-50 border-l-4 border-primary rounded-md min-h-[3.5rem] text-gray-600;
   }
 
   .code-block {
-    @apply bg-slate-800 text-slate-200 p-4 rounded-md overflow-x-auto font-mono text-sm;
+    @apply w-full bg-slate-800 text-slate-200 p-4 rounded-md
+         whitespace-pre-wrap break-words
+         font-mono text-sm text-left;
   }
 }
+
+.dialog-dropdown {
+    margin-top: 0;
+    margin-bottom: auto; 
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0 0 1rem 1rem; 
+    animation: slideDown 0.3s ease-out forwards;
+  }
+
+  .dialog-dropdown::backdrop {
+    background-color: rgba(15, 23, 42, 0.5); 
+    backdrop-filter: blur(4px);
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
