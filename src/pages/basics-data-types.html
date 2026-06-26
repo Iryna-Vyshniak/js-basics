@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8">
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        >
+        <title>Типи даних та оператори - JS BASICS</title>
+    </head>
+    <body
+        data-page="basics-data-types"
+        class="bg-gray-100 text-gray-800 font-sans leading-relaxed"
+    >
+
+        <header class="sticky top-0 z-40 w-full border-b border-gray-200/50 bg-white/95 supports-[backdrop-filter]:bg-white/70 supports-[backdrop-filter]:backdrop-blur-md mb-8">
+
+            <div class="max-w-4xl mx-auto w-full flex justify-between items-start px-4 md:px-8 py-4">
+
+                <div class="flex flex-col w-full max-w-md">
+                    <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Типи даних та оператори</h1>
+
+                    <div class="mb-2">
+                        <button
+                            type="button"
+                            id="btn-materials"
+                            class="group flex items-center gap-1 text-sm md:text-base font-medium text-blue-700 hover:text-blue-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 rounded-sm transition-colors"
+                            aria-expanded="false"
+                            aria-controls="materials-content"
+                        >
+                            Корисні матеріали
+                            <svg
+                                class="w-4 h-4 transition-transform duration-300 group-aria-expanded:-rotate-180"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M19 9l-7 7-7-7"
+                                ></path>
+                            </svg>
+                        </button>
+
+                        <div
+                            id="materials-content"
+                            class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-in-out"
+                        >
+                            <div class="overflow-hidden">
+                                <ul class="py-2 mt-1 border-l-2 border-blue-200 pl-3">
+                                    <li>
+                                        <a
+                                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                            Grammar_and_types
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                            Data types and data structures
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                            Expressions and operators
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                            Operator precedence
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                            Numbers and operators
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://javascript.info/string"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                            Strings
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://javascript.info/number"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                            Number
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://javascript.info/operators"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                            Operators
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-gray-600 m-0 text-sm md:text-base">Практичне розв'язання задач</p>
+                </div>
+
+                <button
+                    id="btn-burger"
+                    type="button"
+                    class="p-2 mt-1 text-gray-600 shrink-0 hover:text-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 rounded-md transition-colors"
+                    aria-label="Відкрити меню навігації"
+                    aria-expanded="false"
+                    aria-controls="nav-modal"
+                >
+                    <svg
+                        class="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"
+                        ></path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <dialog
+            id="nav-modal"
+            class="dialog-dropdown bg-white p-0 shadow-xl border-0"
+        >
+            <div class="max-w-5xl mx-auto w-full">
+                <div class="py-4 px-4 sm:px-6 border-b flex justify-between items-center bg-gray-50">
+                    <h2 class="text-lg font-bold text-gray-800">Навігація</h2>
+                    <button
+                        id="btn-close-modal"
+                        class="p-2 -mr-2 text-gray-500 hover:text-red-500 transition-colors rounded-md focus-visible:ring-2 focus-visible:ring-red-500 focus:outline-none"
+                        aria-label="Close menu"
+                    >
+                        <svg
+                            class="w-6 h-6"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"
+                            ></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <nav
+                    class="py-4 px-4 sm:px-6"
+                    aria-label="Modal navigation"
+                >
+                    <ul class="space-y-2">
+                        <li>
+                            <a
+                                href="/"
+                                class="block p-4 border rounded hover:border-primary hover:bg-primary-50 transition-colors focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                            >
+                                <span class="font-bold block">Основи JS</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/src/pages/basics-data-types.html"
+                                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                                aria-current="page"
+                            >
+                                <span class="font-bold block text-primary-800">Типи даних та оператори</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </dialog>
+        <main class="max-w-4xl mx-auto">
+            <section
+                aria-labelledby="sec-minimum"
+                class="section-card"
+            >
+                <h2
+                    id="sec-minimum"
+                    class="text-2xl font-semibold mb-4 border-b pb-2"
+                >Рівень: Мінімум</h2>
+
+                <div class="grid grid-cols-1 gap-8">
+                    <article>
+                        <h3 class="font-medium mb-4 text-lg">1 & 2. Математично правильні обчислення</h3>
+                        <div class="grid md:grid-cols-1 gap-8">
+                            <div>
+                                <p class="mb-2 text-sm text-gray-700">Проблема точності дробів (0.1 + 0.2):</p>
+                                <div class="code-block whitespace-pre">
+const sum = (0.1 + 0.2).toFixed(1);
+console.log(sum); // "0.3"
+                                </div>
+                                <div class="result-box">Результат: <strong class="ml-2 text-gray-900">0.3</strong></div>
+                            </div>
+                            <div>
+                                <p class="mb-2 text-sm text-gray-700">Проблема додавання рядка та числа ("1" + 2):</p>
+                                <div class="code-block whitespace-pre">
+let strVal = "1";
+let numVal = 2;
+const total = Number(strVal) + numVal;
+console.log(total); // 3
+                                </div>
+                                <div class="result-box">Результат: <strong class="ml-2 text-gray-900">3</strong></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article>
+                        <h3 class="font-medium mb-2 text-lg">3. Місткість флешки (файли по 820 МБ)</h3>
+                        <form
+                            id="form-usb"
+                            class="space-y-3 max-w-md"
+                            novalidate
+                        >
+                            <div>
+                                <label
+                                    for="usb-size"
+                                    class="block text-sm font-medium text-gray-700"
+                                >Обсяг флешки (у ГБ):</label>
+                                <input
+                                    type="number"
+                                    id="usb-size"
+                                    name="usb_size"
+                                    class="input-field"
+                                    min="1"
+                                    step="1"
+                                    required
+                                    placeholder="Наприклад: 16"
+                                >
+                            </div>
+                            <button
+                                type="submit"
+                                class="btn-primary"
+                            >Розрахувати файли</button>
+                        </form>
+                        <div
+                            id="res-usb"
+                            class="result-box max-w-md"
+                            aria-live="polite"
+                        >Очікування вводу...</div>
+                    </article>
+                </div>
+            </section>
+
+            <section
+                aria-labelledby="sec-norma"
+                class="section-card"
+            >
+                <h2
+                    id="sec-norma"
+                    class="text-2xl font-semibold mb-4 border-b pb-2"
+                >Рівень: Норма</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                    <div class="flex flex-col h-full">
+                        <h3 class="font-medium mb-2 text-lg">1. Купівля шоколадок</h3>
+
+                        <form
+                            id="form-choco"
+                            class="flex flex-col flex-grow"
+                            novalidate
+                        >
+                            <div class="space-y-3">
+                                <div>
+                                    <label
+                                        for="wallet_money"
+                                        class="block text-sm font-medium text-gray-700"
+                                    >Сума в гаманці (грн):</label>
+                                    <input
+                                        type="number"
+                                        name="wallet_money"
+                                        id="wallet_money"
+                                        class="input-field w-full"
+                                        min="0"
+                                        step="0.01"
+                                        required
+                                        placeholder="Наприклад: 100"
+                                    >
+                                </div>
+                                <div>
+                                    <label
+                                        for="choco-price"
+                                        class="block text-sm font-medium text-gray-700"
+                                    >Ціна однієї шоколадки (грн):</label>
+                                    <input
+                                        type="number"
+                                        name="choco_price"
+                                        id="choco-price"
+                                        class="input-field w-full"
+                                        min="0.01"
+                                        step="0.01"
+                                        required
+                                        placeholder="Наприклад: 35"
+                                    >
+                                </div>
+                            </div>
+
+                            <button
+                                type="submit"
+                                class="btn-primary mt-4"
+                            >Купити</button>
+
+                            <div
+                                id="res-choco"
+                                class="result-box mt-3"
+                                aria-live="polite"
+                            >Очікування вводу...</div>
+                        </form>
+                    </div>
+
+                    <div class="flex flex-col h-full">
+                        <h3 class="font-medium mb-2 text-lg">2. Розворот тризначного числа</h3>
+
+                        <form
+                            id="form-reverse"
+                            class="flex flex-col flex-grow"
+                            novalidate
+                        >
+                            <div class="space-y-2">
+                                <label
+                                    for="three-digit"
+                                    class="block text-sm font-medium text-gray-700"
+                                >Введіть число (від 100 до 999):</label>
+                                <input
+                                    type="number"
+                                    name="three_digit"
+                                    id="three-digit"
+                                    class="input-field w-full"
+                                    min="100"
+                                    max="999"
+                                    step="1"
+                                    required
+                                    placeholder="Наприклад: 123"
+                                >
+                                <p class="text-xs text-gray-500 mt-2">Використовується математичний оператор % (залишок від ділення).</p>
+                            </div>
+
+                            <button
+                                type="submit"
+                                class="btn-primary mt-auto"
+                            >Розвернути число</button>
+
+                            <div
+                                id="res-reverse"
+                                class="result-box mt-3"
+                                aria-live="polite"
+                            >Очікування вводу...</div>
+                        </form>
+                    </div>
+
+                </div>
+            </section>
+            <section
+                aria-labelledby="sec-maximum"
+                class="section-card"
+            >
+                <h2
+                    id="sec-maximum"
+                    class="text-2xl font-semibold mb-4 border-b pb-2"
+                >Рівень: Максимум</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <article>
+                        <h3 class="font-medium mb-2 text-lg">1. Банківський депозит (5% річних на 2 міс.)</h3>
+                        <form
+                            id="form-deposit"
+                            class="space-y-3"
+                            novalidate
+                        >
+                            <div>
+                                <label
+                                    for="deposit-amount"
+                                    class="block text-sm font-medium text-gray-700"
+                                >Сума вкладу:</label>
+                                <input
+                                    type="number"
+                                    name="deposit_amount"
+                                    id="deposit-amount"
+                                    class="input-field"
+                                    min="1"
+                                    step="0.01"
+                                    required
+                                    placeholder="Наприклад: 10000"
+                                >
+                            </div>
+                            <button
+                                type="submit"
+                                class="btn-primary"
+                            >Розрахувати відсотки</button>
+                        </form>
+                        <div
+                            id="res-deposit"
+                            class="result-box"
+                            aria-live="polite"
+                        >Очікування вводу...</div>
+                    </article>
+
+                    <article>
+                        <h3 class="font-medium mb-4 text-lg">2. Результати логічних виразів</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <code class="px-2 py-1 bg-slate-800 text-slate-200 rounded text-sm font-mono font-bold">2 && 0 && 3</code>
+                                <p class="text-sm mt-2 text-gray-800">Повертає: <strong>0</strong>.</p>
+                                <p class="text-xs text-gray-500">Оператор І (&&) зупиняється на першому хибному значенні (falsy). 0 - це falsy.</p>
+                            </div>
+                            <hr class="border-gray-200">
+                            <div>
+                                <code class="px-2 py-1 bg-slate-800 text-slate-200 rounded text-sm font-mono font-bold">2 || 0 || 3</code>
+                                <p class="text-sm mt-2 text-gray-800">Повертає: <strong>2</strong>.</p>
+                                <p class="text-xs text-gray-500">Оператор АБО (||) зупиняється на першому істинному значенні (truthy). 2 - це truthy.</p>
+                            </div>
+                            <hr class="border-gray-200">
+                            <div>
+                                <code class="px-2 py-1 bg-slate-800 text-slate-200 rounded text-sm font-mono font-bold">2 && 0 || 3</code>
+                                <p class="text-sm mt-2 text-gray-800">Повертає: <strong>3</strong>.</p>
+                                <p class="text-xs text-gray-500">Спочатку обчислюється `2 && 0` (результат 0). Потім `0 || 3` (результат 3).</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <script
+            type="module"
+            src="/src/js/main.js"
+        ></script>
+    </body>
+</html>
