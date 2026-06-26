@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import path from 'path';
+import path, { resolve } from 'path';
 
 export default defineConfig({
   root: './',
@@ -19,6 +19,10 @@ export default defineConfig({
       },
     },
     rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        "basics-data-types": resolve(__dirname, 'src/pages/basics-data-types.html'),
+      },
       output: {
         chunkFileNames: 'assets/js/[name]-[hash].js',
         entryFileNames: 'assets/js/[name]-[hash].js',
