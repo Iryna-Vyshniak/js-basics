@@ -4,6 +4,7 @@ import { initNavigation } from './modules/nav.js';
 import { initBasicData } from './modules/basic.js';
 import { initBasicDataTypes } from './modules/basics-data-types.js';
 import { initSubmenu } from './modules/submenu.js';
+import { initLoopsConditions } from './modules/loops-conditions.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const pageModules = {
     home: initBasicData,
     'basics-data-types': initBasicDataTypes,
+    'loops-conditions': initLoopsConditions, 
   };
 
   const initPage = pageModules[page];
