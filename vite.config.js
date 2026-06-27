@@ -22,6 +22,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         "basics-data-types": resolve(__dirname, 'src/pages/basics-data-types.html'),
+        "loops-conditions": resolve(__dirname, 'src/pages/loops-conditions.html')
       },
       output: {
         chunkFileNames: 'assets/js/[name]-[hash].js',
