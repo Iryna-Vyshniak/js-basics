@@ -4,7 +4,7 @@ export const showResult = (elementId, content) => {
     console.error(`Елемент з ID "${elementId}" не знайдено.`);
     return;
   }
-  el.textContent = content;
+  el.innerHTML = content;
 };
 
 export const handleFormSubmit = (formId, callback) => {
