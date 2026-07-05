@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Функції - JS BASICS</title>
+    </head>
+    <body
+        data-page="functions"
+        class="bg-gray-100 text-gray-800 font-sans leading-relaxed"
+    >
+
+        <header class="sticky top-0 z-40 w-full border-b border-gray-200/50 bg-white/95 supports-[backdrop-filter]:bg-white/70 supports-[backdrop-filter]:backdrop-blur-md mb-8">
+            <div class="max-w-4xl mx-auto w-full flex justify-between items-start px-4 md:px-8 py-4">
+                <div class="flex flex-col w-full max-w-md">
+                    <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Функції</h1>
+                      <div class="mb-2">
+                        <button
+                            type="button"
+                            id="btn-materials"
+                            class="group flex items-center gap-1 text-sm md:text-base font-medium text-blue-700 hover:text-blue-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 rounded-sm transition-colors"
+                            aria-expanded="false"
+                            aria-controls="materials-content"
+                        >
+                            Корисні матеріали
+                            <svg
+                                class="w-4 h-4 transition-transform duration-300 group-aria-expanded:-rotate-180"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M19 9l-7 7-7-7"
+                                ></path>
+                            </svg>
+                        </button>
+
+                        <div
+                            id="materials-content"
+                            class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-in-out"
+                        >
+                            <div class="overflow-hidden">
+                                <ul class="py-2 mt-1 border-l-2 border-blue-200 pl-3">
+                                    <li>
+                                        <a
+                                            href="https://uk.javascript.info/function-basics"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                           Функції
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://uk.javascript.info/function-expressions"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                           Функціональні вирази
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a
+                                            href="https://uk.javascript.info/arrow-functions-basics"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                            Стрілкові функції, основи
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://medium.com/@mandeep1012/function-declarations-vs-function-expressions-b43646042052"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                            Function Declarations vs. Function Expressions
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://www.javascripttutorial.net/javascript-anonymous-functions/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                            JavaScript Anonymous Functions
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                            Functions — reusable blocks of code
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://www.w3schools.com/js/js_function_closures.asp"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                            Function closures
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Return_values"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                            Function return values
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                           Default parameters
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Rest_parameters"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                           Rest parameters
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                          The arguments object
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 m-0 text-sm md:text-base">Практичне розв'язання задач</p>
+                </div>
+
+                <button
+                    id="btn-burger"
+                    type="button"
+                    class="p-2 mt-1 text-gray-600 shrink-0 hover:text-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 rounded-md transition-colors"
+                    aria-label="Відкрити меню навігації"
+                    aria-expanded="false"
+                    aria-controls="nav-modal"
+                >
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+      <dialog
+            id="nav-modal"
+            class="dialog-dropdown bg-white p-0 shadow-xl border-0"
+        >
+            <div class="max-w-5xl mx-auto w-full">
+                <div class="py-4 px-4 sm:px-6 border-b flex justify-between items-center bg-gray-50">
+                    <h2 class="text-lg font-bold text-gray-800">Навігація</h2>
+                    <button
+                        id="btn-close-modal"
+                        class="p-2 -mr-2 text-gray-500 hover:text-red-500 transition-colors rounded-md focus-visible:ring-2 focus-visible:ring-red-500 focus:outline-none"
+                        aria-label="Close menu"
+                    >
+                        <svg
+                            class="w-6 h-6"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"
+                            ></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <nav
+                    class="py-4 px-4 sm:px-6"
+                    aria-label="Modal navigation"
+                >
+                    <ul class="space-y-2">
+                        <li>
+                            <a
+                                href="/"
+                                class="block p-4 border rounded hover:border-primary hover:bg-primary-50 transition-colors focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                            >
+                                <span class="font-bold block">Основи JS</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/src/pages/basics-data-types.html"
+                                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                                aria-current="page"
+                            >
+                                <span class="font-bold block text-primary-800">Типи даних та оператори</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/src/pages/loops-conditions.html"
+                                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                                aria-current="page"
+                            >
+                                <span class="font-bold block text-primary-800">Цикли й умови</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/src/pages/functions.html"
+                                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                                aria-current="page"
+                            >
+                                <span class="font-bold block text-primary-800">Функції</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/src/pages/objects.html"
+                                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                                aria-current="page"
+                            >
+                                <span class="font-bold block text-primary-800">Об'єкти</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/src/pages/arrays.html"
+                                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                                aria-current="page"
+                            >
+                                <span class="font-bold block text-primary-800">Масиви</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </dialog>
+
+        <main class="max-w-4xl mx-auto px-4 md:px-8 pb-12">
+            
+        <!-- СЕКЦІЯ: МІНІМУМ -->
+<section aria-labelledby="minimum-heading" class="bg-white p-6 md:p-8 rounded-lg shadow-sm mb-8">
+    <h2 id="minimum-heading" class="text-2xl font-semibold mb-6 border-b pb-2">Рівень: Мінімум</h2>
+    
+    <div class="mb-8">
+        <h3 class="text-lg font-medium mb-3">1 & 2. Способи створення функцій та підрахунок аргументів</h3>
+        <pre class="code-block whitespace-pre" tabindex="0"><code>
+
+// 1. Function Declaration (Оголошення функції)
+function calculateSum(a, b) {
+  return a + b;
+}
+
+// 2. Function Expression (Функціональний вираз)
+const multiply = function(a, b) {
+  return a * b;
+};
+
+// 3. Arrow Function (Стрілкова функція)
+const divide = (a, b) => a / b;
+
+// 4. IIFE (Негайно викликана функція)
+(function() {
+  console.log("Викликається відразу");
+})();
+
+// 5. Async Function (Асинхронна функція)
+async function fetchData() {
+  return await fetch('/api/data');
+}
+
+// 6. Generator Function (Функція-генератор)
+function* idMaker() {
+  let index = 0;
+  while (true) yield index++;
+}
+
+// 7. Object / Class Methods (Методи об'єктів та класів)
+const apiService = {
+  getData() { return true; }
+};
+
+// 8. The Function Constructor (Не рекомендовано)
+const dynamicSum = new Function('a', 'b', 'return a + b');
+
+
+// === ПІДРАХУНОК АРГУМЕНТІВ ===
+
+// 1. Rest Parameters (...args) - Сучасний підхід
+const countRest = (...args) => args.length;
+// Виклик: countRest(1, 'text', true) поверне 3
+
+// 2. Псевдомасив arguments - Застарілий підхід (відсутній у стрілкових)
+function countLegacy() {
+  return arguments.length;
+}
+
+// 3. Властивість Function.length (Арність функції)
+// Рахує очікувану кількість параметрів до першого дефолтного значення
+function arityExample(a, b, c = 3, ...rest) {}
+// Виклик: console.log(arityExample.length) поверне 2</code></pre>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Завдання 3 -->
+        <article>
+            <h3 class="text-lg font-medium mb-4">3. Порівняння двох чисел</h3>
+            <form id="form-compare" class="space-y-4" novalidate>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label for="comp-num-1" class="block text-sm font-medium text-gray-700 mb-1">Число 1:</label>
+                        <input type="number" name="num1" id="comp-num-1" class="w-full border border-gray-300 rounded-md p-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-shadow" required autocomplete="off" aria-describedby="comp-error-1">
+                    </div>
+                    <div>
+                        <label for="comp-num-2" class="block text-sm font-medium text-gray-700 mb-1">Число 2:</label>
+                        <input type="number" name="num2" id="comp-num-2" class="w-full border border-gray-300 rounded-md p-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-shadow" required autocomplete="off" aria-describedby="comp-error-2">
+                    </div>
+                </div>
+                <button type="submit" class="w-full min-h-[44px] bg-blue-600 text-white font-medium py-2 px-4 rounded-md hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition-colors">Порівняти</button>
+            </form>
+            <div id="result-compare" class="mt-4 p-3 bg-gray-50 border border-gray-200 rounded-md min-h-[3rem] flex items-center overflow-hidden text-ellipsis text-gray-800" aria-live="polite">Очікування вводу...</div>
+        </article>
+
+        <!-- Завдання 4 -->
+        <article>
+            <h3 class="text-lg font-medium mb-4">4. Факторіал числа</h3>
+            <form id="form-factorial" class="space-y-4" novalidate>
+                <div>
+                    <label for="fact-num" class="block text-sm font-medium text-gray-700 mb-1">Число (n!):</label>
+                    <input type="number" name="fact_num" id="fact-num" class="w-full border border-gray-300 rounded-md p-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-shadow" min="0" max="170" required autocomplete="off" aria-describedby="fact-error">
+                </div>
+                <button type="submit" class="w-full min-h-[44px] bg-blue-600 text-white font-medium py-2 px-4 rounded-md hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition-colors">Обчислити</button>
+            </form>
+            <div id="result-factorial" class="mt-4 p-3 bg-gray-50 border border-gray-200 rounded-md min-h-[3rem] flex items-center overflow-hidden text-ellipsis text-gray-800" aria-live="polite">Очікування вводу...</div>
+        </article>
+
+        <!-- Завдання 5 -->
+        <article>
+            <h3 class="text-lg font-medium mb-4">5. Об'єднання цифр</h3>
+            <form id="form-digits" class="space-y-4" novalidate>
+                <fieldset class="grid grid-cols-3 gap-4 border-0 p-0 m-0">
+                    <legend class="sr-only">Введіть три цифри для об'єднання</legend>
+                    <div>
+                        <label for="digit-1" class="sr-only">Цифра 1</label>
+                        <input type="number" name="digit1" id="digit-1" class="w-full border border-gray-300 rounded-md p-2.5 text-center focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-shadow" min="0" max="9" placeholder="0-9" required autocomplete="off">
+                    </div>
+                    <div>
+                        <label for="digit-2" class="sr-only">Цифра 2</label>
+                        <input type="number" name="digit2" id="digit-2" class="w-full border border-gray-300 rounded-md p-2.5 text-center focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-shadow" min="0" max="9" placeholder="0-9" required autocomplete="off">
+                    </div>
+                    <div>
+                        <label for="digit-3" class="sr-only">Цифра 3</label>
+                        <input type="number" name="digit3" id="digit-3" class="w-full border border-gray-300 rounded-md p-2.5 text-center focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-shadow" min="0" max="9" placeholder="0-9" required autocomplete="off">
+                    </div>
+                </fieldset>
+                <button type="submit" class="w-full min-h-[44px] bg-blue-600 text-white font-medium py-2 px-4 rounded-md hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition-colors">З'єднати</button>
+            </form>
+            <div id="result-digits" class="mt-4 p-3 bg-gray-50 border border-gray-200 rounded-md min-h-[3rem] flex items-center text-gray-800" aria-live="polite">Очікування вводу...</div>
+        </article>
+
+        <!-- Завдання 6 -->
+        <article>
+            <h3 class="text-lg font-medium mb-4">6. Площа прямокутника / квадрата</h3>
+            <form id="form-area" class="space-y-4" novalidate>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label for="area-len" class="block text-sm font-medium text-gray-700 mb-1">Довжина (обов.):</label>
+                        <input type="number" name="length" id="area-len" class="w-full border border-gray-300 rounded-md p-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-shadow" min="0" step="0.1" required autocomplete="off">
+                    </div>
+                    <div>
+                        <label for="area-wid" class="block text-sm font-medium text-gray-700 mb-1">Ширина (опц.):</label>
+                        <input type="number" name="width" id="area-wid" class="w-full border border-gray-300 rounded-md p-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-shadow" min="0" step="0.1" autocomplete="off">
+                    </div>
+                </div>
+                <button type="submit" class="w-full min-h-[44px] bg-blue-600 text-white font-medium py-2 px-4 rounded-md hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition-colors">Обчислити площу</button>
+            </form>
+            <div id="result-area" class="mt-4 p-3 bg-gray-50 border border-gray-200 rounded-md min-h-[3rem] flex items-center text-gray-800" aria-live="polite">Очікування вводу...</div>
+        </article>
+    </div>
+</section>
+
+            <!-- СЕКЦІЯ: НОРМА -->
+            <section aria-labelledby="normal-heading" class="section-card bg-white p-6 rounded-lg shadow-sm">
+                <h2 id="normal-heading" class="text-2xl font-semibold mb-6 border-b pb-2">Рівень: Норма</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Завдання 1 -->
+                    <article>
+                        <h3 class="font-medium mb-2">1. Перевірка на досконале число</h3>
+                        <p class="text-xs text-gray-500 mb-3">Число, яке дорівнює сумі всіх своїх дільників (крім самого себе).</p>
+                        <form id="form-perfect" class="space-y-3" novalidate>
+                            <div>
+                                <label for="perf-num" class="sr-only">Введіть число</label>
+                                <input type="number" name="perfect_num" id="perf-num" class="input-field w-full border border-gray-300 rounded p-2" placeholder="Наприклад: 6 або 28" min="1" required>
+                            </div>
+                            <button type="submit" class="btn-primary w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">Перевірити</button>
+                        </form>
+                        <div id="result-perfect" class="result-box mt-3 p-3 bg-gray-50 border border-gray-200 rounded min-h-[3rem] flex items-center" aria-live="polite">Очікування вводу...</div>
+                    </article>
+
+                    <!-- Завдання 2 -->
+                    <article>
+                        <h3 class="font-medium mb-2">2. Досконалі числа в діапазоні</h3>
+                        <p class="text-xs text-gray-500 mb-3">Знаходить усі досконалі числа між двома заданими значеннями.</p>
+                        <form id="form-perfect-range" class="space-y-3" novalidate>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label for="range-min" class="block text-sm font-medium text-gray-700">Від:</label>
+                                    <input type="number" name="min" id="range-min" class="input-field w-full mt-1 border border-gray-300 rounded p-2" min="1" required>
+                                </div>
+                                <div>
+                                    <label for="range-max" class="block text-sm font-medium text-gray-700">До:</label>
+                                    <input type="number" name="max" id="range-max" class="input-field w-full mt-1 border border-gray-300 rounded p-2" min="1" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-primary w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">Знайти</button>
+                        </form>
+                        <div id="result-perfect-range" class="result-box mt-3 p-3 bg-gray-50 border border-gray-200 rounded min-h-[3rem] flex items-center" aria-live="polite">Очікування вводу...</div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <script type="module" src="/src/js/main.js"></script>
+    </body>
+</html>
