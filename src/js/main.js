@@ -5,6 +5,9 @@ import { initBasicData } from './modules/basic.js';
 import { initBasicDataTypes } from './modules/basics-data-types.js';
 import { initSubmenu } from './modules/submenu.js';
 import { initLoopsConditions } from './modules/loops-conditions.js';
+import { initFunctionsData } from './modules/functionsData.js';
+import { initObjectsData } from './modules/objectsData.js';
+import { initArraysData } from './modules/arraysData.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
@@ -16,6 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
     home: initBasicData,
     'basics-data-types': initBasicDataTypes,
     'loops-conditions': initLoopsConditions, 
+    'functions': initFunctionsData,
+    'objects': initObjectsData,
+    'arrays': initArraysData,
   };
 
   const initPage = pageModules[page];
