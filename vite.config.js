@@ -22,7 +22,10 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         "basics-data-types": resolve(__dirname, 'src/pages/basics-data-types.html'),
-        "loops-conditions": resolve(__dirname, 'src/pages/loops-conditions.html')
+        "loops-conditions": resolve(__dirname, 'src/pages/loops-conditions.html'),
+        "functions": resolve(__dirname, 'src/pages/functions.html'),
+        "objects": resolve(__dirname, 'src/pages/objects.html'),
+        "arrays": resolve(__dirname, 'src/pages/arrays.html'),
       },
       output: {
         chunkFileNames: 'assets/js/[name]-[hash].js',
