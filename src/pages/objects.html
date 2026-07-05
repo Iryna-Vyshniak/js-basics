@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Об'єкти - JS BASICS</title>
+    </head>
+    <body
+        data-page="objects"
+        class="bg-gray-100 text-gray-800 font-sans leading-relaxed"
+    >
+
+        <header class="sticky top-0 z-40 w-full border-b border-gray-200/50 bg-white/95 supports-[backdrop-filter]:bg-white/70 supports-[backdrop-filter]:backdrop-blur-md mb-8">
+            <div class="max-w-4xl mx-auto w-full flex justify-between items-start px-4 md:px-8 py-4">
+                <div class="flex flex-col w-full max-w-md">
+                    <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Об'єкти</h1>
+                     <div class="mb-2">
+                        <button
+                            type="button"
+                            id="btn-materials"
+                            class="group flex items-center gap-1 text-sm md:text-base font-medium text-blue-700 hover:text-blue-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 rounded-sm transition-colors"
+                            aria-expanded="false"
+                            aria-controls="materials-content"
+                        >
+                            Корисні матеріали
+                            <svg
+                                class="w-4 h-4 transition-transform duration-300 group-aria-expanded:-rotate-180"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M19 9l-7 7-7-7"
+                                ></path>
+                            </svg>
+                        </button>
+
+                        <div
+                            id="materials-content"
+                            class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-in-out"
+                        >
+                            <div class="overflow-hidden">
+                                <ul class="py-2 mt-1 border-l-2 border-blue-200 pl-3">
+                                    <li>
+                                        <a
+                                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                           Object
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://www.learn-js.org/en/Objects"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                            Objects
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a
+                                            href="https://www.javascripttutorial.net/javascript-objects/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                            JavaScript Objects
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://uk.javascript.info/object-basics"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                            Об’єкти: основи
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://www.freecodecamp.org/news/lets-explore-objects-in-javascript-4a4ad76af798/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                            JavaScript: exploring objects  
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 m-0 text-sm md:text-base">Практичне розв'язання задач</p>
+                </div>
+
+                <button
+                    id="btn-burger"
+                    type="button"
+                    class="p-2 mt-1 text-gray-600 shrink-0 hover:text-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 rounded-md transition-colors"
+                    aria-label="Відкрити меню навігації"
+                    aria-expanded="false"
+                    aria-controls="nav-modal"
+                >
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+         <dialog
+            id="nav-modal"
+            class="dialog-dropdown bg-white p-0 shadow-xl border-0"
+        >
+            <div class="max-w-5xl mx-auto w-full">
+                <div class="py-4 px-4 sm:px-6 border-b flex justify-between items-center bg-gray-50">
+                    <h2 class="text-lg font-bold text-gray-800">Навігація</h2>
+                    <button
+                        id="btn-close-modal"
+                        class="p-2 -mr-2 text-gray-500 hover:text-red-500 transition-colors rounded-md focus-visible:ring-2 focus-visible:ring-red-500 focus:outline-none"
+                        aria-label="Close menu"
+                    >
+                        <svg
+                            class="w-6 h-6"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"
+                            ></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <nav
+                    class="py-4 px-4 sm:px-6"
+                    aria-label="Modal navigation"
+                >
+                    <ul class="space-y-2">
+                        <li>
+                            <a
+                                href="/"
+                                class="block p-4 border rounded hover:border-primary hover:bg-primary-50 transition-colors focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                            >
+                                <span class="font-bold block">Основи JS</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/src/pages/basics-data-types.html"
+                                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                                aria-current="page"
+                            >
+                                <span class="font-bold block text-primary-800">Типи даних та оператори</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/src/pages/loops-conditions.html"
+                                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                                aria-current="page"
+                            >
+                                <span class="font-bold block text-primary-800">Цикли й умови</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/src/pages/functions.html"
+                                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                                aria-current="page"
+                            >
+                                <span class="font-bold block text-primary-800">Функції</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/src/pages/objects.html"
+                                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                                aria-current="page"
+                            >
+                                <span class="font-bold block text-primary-800">Об'єкти</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/src/pages/arrays.html"
+                                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                                aria-current="page"
+                            >
+                                <span class="font-bold block text-primary-800">Масиви</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </dialog>
+        <main class="max-w-4xl mx-auto px-4 md:px-8 pb-12 space-y-8">
+            
+            <!-- СЕКЦІЯ: МІНІМУМ -->
+            <section aria-labelledby="minimum-heading" class="section-card bg-white p-6 rounded-lg shadow-sm">
+                <h2 id="minimum-heading" class="text-2xl font-semibold mb-6 border-b pb-2">Рівень: Мінімум (Автомобіль)</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Інформація про авто -->
+                    <article>
+                        <h3 class="font-medium mb-3">Стан об'єкта "Автомобіль"</h3>
+                        <div id="car-info-display" class="code-block" aria-live="polite">
+Завантаження даних...
+                        </div>
+                    </article>
+
+                    <div class="space-y-6">
+                        <!-- Додавання водія -->
+                        <article>
+                            <h3 class="font-medium mb-2 text-sm">Додати водія</h3>
+                            <form id="form-add-driver" class="flex flex-col gap-2" novalidate>
+                                <label for="driver-name" class="sr-only">Ім'я водія</label>
+                                <input type="text" name="driver_name" id="driver-name" class="input-field flex-1 border border-gray-300 rounded p-2 text-sm" placeholder="Наприклад: John" required>
+                                <button type="submit" class="btn-primary bg-blue-600 text-white px-4 py-2 rounded text-sm hover:bg-blue-700 transition">Додати</button>
+                            </form>
+                        </article>
+
+                        <!-- Перевірка водія -->
+                        <article>
+                            <h3 class="font-medium mb-2 text-sm">Перевірити водія</h3>
+                            <form id="form-check-driver" class="flex flex-col  gap-2" novalidate>
+                                <label for="check-driver-name" class="sr-only">Ім'я водія</label>
+                                <input type="text" name="check_name" id="check-driver-name" class="input-field flex-1 border border-gray-300 rounded p-2 text-sm" placeholder="Кого шукаємо?" required>
+                                <button type="submit" class="btn-primary bg-blue-600 text-white px-4 py-2 rounded text-sm hover:bg-blue-700 transition">Знайти</button>
+                            </form>
+                            <div id="result-check-driver" class="mt-2 text-sm" aria-live="polite"></div>
+                        </article>
+
+                        <!-- Розрахунок поїздки -->
+                        <article>
+                            <h3 class="font-medium mb-2 text-sm">Розрахунок поїздки</h3>
+                            <form id="form-trip" class="flex flex-col  gap-2" novalidate>
+                                <label for="trip-distance" class="sr-only">Відстань (км)</label>
+                                <input type="number" name="distance" id="trip-distance" class="input-field flex-1 border border-gray-300 rounded p-2 text-sm" placeholder="Відстань (км)" min="1" required>
+                                <button type="submit" class="btn-primary bg-blue-600 text-white px-4 py-2 rounded text-sm hover:bg-blue-700 transition">Розрахувати</button>
+                            </form>
+                            <div id="result-trip" class="result-box" aria-live="polite"></div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- СЕКЦІЯ: НОРМА -->
+            <section aria-labelledby="normal-heading" class="section-card bg-white p-6 rounded-lg shadow-sm">
+                <h2 id="normal-heading" class="text-2xl font-semibold mb-6 border-b pb-2">Рівень: Норма (Годинник)</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <article class="flex flex-col items-center justify-center bg-gray-50 p-6 rounded border border-gray-200">
+                        <h3 class="text-sm text-gray-500 uppercase tracking-wider mb-2">Поточний час об'єкта</h3>
+                        <div id="time-display" class="text-5xl md:text-6xl font-bold text-gray-800 font-mono" aria-live="polite">
+                            00:00:00
+                        </div>
+                    </article>
+
+                    <article>
+                        <h3 class="font-medium mb-4">Змінити час</h3>
+                        <form id="form-time-edit" class="space-y-4" novalidate>
+                            <div class="flex gap-4 items-end">
+                                <div class="flex-1">
+                                    <label for="time-amount" class="block text-sm font-medium text-gray-700 mb-1">Кількість:</label>
+                                    <input type="number" name="amount" id="time-amount" class="input-field w-full border border-gray-300 rounded p-2" placeholder="Напр: 150" required>
+                                </div>
+                                <div class="flex-1">
+                                    <label for="time-unit" class="block text-sm font-medium text-gray-700 mb-1">Одиниця:</label>
+                                    <select name="unit" id="time-unit" class="input-field w-full border border-gray-300 rounded p-2 bg-white">
+                                        <option value="seconds">Секунди</option>
+                                        <option value="minutes">Хвилини</option>
+                                        <option value="hours">Години</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-primary w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">Застосувати зміну</button>
+                        </form>
+                        <p class="text-xs text-gray-500 mt-2">Підтримуються від'ємні значення (наприклад: -30 хвилин).</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- СЕКЦІЯ: МАКСИМУМ -->
+            <section aria-labelledby="max-heading" class="section-card bg-white p-6 rounded-lg shadow-sm">
+                <h2 id="max-heading" class="text-2xl font-semibold mb-6 border-b pb-2">Рівень: Максимум (Дроби)</h2>
+
+                <article>
+                    <form id="form-fractions" class="flex flex-col md:flex-row gap-6 items-center justify-center bg-gray-50 p-6 rounded border border-gray-200" novalidate>
+                        
+                        <!-- Дріб 1 -->
+                        <div class="flex flex-col gap-2 w-24">
+                            <label for="f1-num" class="sr-only">Чисельник 1</label>
+                            <input type="number" name="f1_n" id="f1-num" class="input-field text-center border-b-2 border-gray-800 bg-transparent p-1 focus:outline-none" required placeholder="Чис.">
+                            <label for="f1-den" class="sr-only">Знаменник 1</label>
+                            <input type="number" name="f1_d" id="f1-den" class="input-field text-center bg-transparent p-1 focus:outline-none" required placeholder="Знам.">
+                        </div>
+
+                        <!-- Операція -->
+                        <div class="w-full md:w-auto">
+                            <label for="fraction-op" class="sr-only">Математична операція</label>
+                            <select name="operation" id="fraction-op" class="input-field w-full md:w-auto border border-gray-300 rounded p-2 text-lg font-bold bg-white text-center cursor-pointer">
+                                <option value="add">+</option>
+                                <option value="sub">-</option>
+                                <option value="mul">×</option>
+                                <option value="div">÷</option>
+                            </select>
+                        </div>
+
+                        <!-- Дріб 2 -->
+                        <div class="flex flex-col gap-2 w-24">
+                            <label for="f2-num" class="sr-only">Чисельник 2</label>
+                            <input type="number" name="f2_n" id="f2-num" class="input-field text-center border-b-2 border-gray-800 bg-transparent p-1 focus:outline-none" required placeholder="Чис.">
+                            <label for="f2-den" class="sr-only">Знаменник 2</label>
+                            <input type="number" name="f2_d" id="f2-den" class="input-field text-center bg-transparent p-1 focus:outline-none" required placeholder="Знам.">
+                        </div>
+
+                        <button type="submit" class="btn-primary bg-blue-600 text-white px-6 py-3 rounded text-lg font-bold hover:bg-blue-700 transition">=</button>
+                    </form>
+
+                    <div id="result-fraction" class="mt-6 text-center text-2xl font-bold text-gray-800 h-12 flex items-center justify-center result-box" aria-live="polite">
+                        <!-- Результат з'явиться тут -->
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <script type="module" src="/src/js/main.js"></script>
+    </body>
+</html>
