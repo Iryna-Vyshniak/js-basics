@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOM - JS BASICS</title>
+    </head>
+    <body
+        data-page="dom"
+        class="bg-gray-100 text-gray-800 font-sans leading-relaxed"
+    >
+        <header class="sticky top-0 z-40 w-full border-b border-gray-200/50 bg-white/95 supports-[backdrop-filter]:bg-white/70 supports-[backdrop-filter]:backdrop-blur-md mb-8">
+            <div class="max-w-4xl mx-auto w-full flex justify-between items-start px-4 md:px-8 py-4">
+                <div class="flex flex-col w-full max-w-md">
+                    <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Робота з DOM</h1>
+                      <div class="mb-2">
+                        <button
+                            type="button"
+                            id="btn-materials"
+                            class="group flex items-center gap-1 text-sm md:text-base font-medium text-blue-700 hover:text-blue-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 rounded-sm transition-colors"
+                            aria-expanded="false"
+                            aria-controls="materials-content"
+                        >
+                            Корисні матеріали
+                            <svg
+                                class="w-4 h-4 transition-transform duration-300 group-aria-expanded:-rotate-180"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M19 9l-7 7-7-7"
+                                ></path>
+                            </svg>
+                        </button>
+
+                        <div
+                            id="materials-content"
+                            class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-in-out"
+                        >
+                            <div class="overflow-hidden">
+                                <ul class="py-2 mt-1 border-l-2 border-blue-200 pl-3">
+                                    <li>
+                                        <a
+                                            href="https://www.w3schools.com/js/js_htmldom.asp"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                           JavaScript HTML DOM
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://javascript.info/dom-nodes"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                            DOM tree 
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://javascript.info/dom-navigation"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                            DOM navigation 
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://www.w3schools.com/js/js_htmldom_navigation.asp"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                            JavaScript HTML DOM Navigation 
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a
+                                            href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                            Introduction to the DOM
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                            Document Object Model (DOM)
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://www.javascripttutorial.net/javascript-dom/document-object-model-in-javascript/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                                        >
+                                            Document Object Model in JavaScript
+                                            <span class="sr-only">(відкривається в новій вкладці)</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-gray-600 m-0 text-sm md:text-base">Плейлист та інтерактивне модальне вікно</p>
+                </div>
+
+                <button
+                    id="btn-burger"
+                    type="button"
+                    class="p-2 mt-1 text-gray-600 shrink-0 hover:text-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 rounded-md transition-colors"
+                    aria-label="Відкрити меню навігації"
+                    aria-expanded="false"
+                    aria-controls="nav-modal"
+                >
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+ <dialog
+            id="nav-modal"
+            class="dialog-dropdown bg-white p-0 shadow-xl border-0"
+        >
+            <div class="max-w-5xl mx-auto w-full">
+                <div class="py-4 px-4 sm:px-6 border-b flex justify-between items-center bg-gray-50">
+                    <h2 class="text-lg font-bold text-gray-800">Навігація</h2>
+                    <button
+                        id="btn-close-modal"
+                        class="p-2 -mr-2 text-gray-500 hover:text-red-500 transition-colors rounded-md focus-visible:ring-2 focus-visible:ring-red-500 focus:outline-none"
+                        aria-label="Close menu"
+                    >
+                        <svg
+                            class="w-6 h-6"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"
+                            ></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <nav
+                    class="py-4 px-4 sm:px-6"
+                    aria-label="Modal navigation"
+                >
+                    <ul class="space-y-2">
+                        <li>
+                            <a
+                                href="/"
+                                class="block p-4 border rounded hover:border-primary hover:bg-primary-50 transition-colors focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                            >
+                                <span class="font-bold block">Основи JS</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/src/pages/basics-data-types.html"
+                                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                                aria-current="page"
+                            >
+                                <span class="font-bold block text-primary-800">Типи даних та оператори</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/src/pages/loops-conditions.html"
+                                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                                aria-current="page"
+                            >
+                                <span class="font-bold block text-primary-800">Цикли й умови</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/src/pages/functions.html"
+                                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                                aria-current="page"
+                            >
+                                <span class="font-bold block text-primary-800">Функції</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/src/pages/objects.html"
+                                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                                aria-current="page"
+                            >
+                                <span class="font-bold block text-primary-800">Об'єкти</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/src/pages/arrays.html"
+                                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                                aria-current="page"
+                            >
+                                <span class="font-bold block text-primary-800">Масиви</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/src/pages/dom.html"
+                                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                                aria-current="page"
+                            >
+                                <span class="font-bold block text-primary-800">Робота з DOM</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </dialog>
+
+        <main class="max-w-4xl mx-auto px-4 md:px-8 pb-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+            
+            <!--  Плейлист -->
+     <section aria-labelledby="playlist-heading" class="section-card bg-[#E6E7EE] p-8 md:p-12 rounded-[3rem] shadow-sm col-span-1 md:col-span-2 flex items-center justify-center">
+                <h2 id="playlist-heading" class="sr-only">1. Музичний програвач</h2>
+                <div class="flex flex-col lg:flex-row gap-10 items-center lg:items-center justify-center w-full max-w-[800px]">
+                    
+                    <div class="bg-neo shadow-neo-convex rounded-[40px] p-8 w-[380px] h-[380px] shrink-0 flex flex-col justify-between relative">
+                        
+                        <div class="flex flex-col h-full mb-4" aria-live="polite">
+                            <div class="flex justify-between font-led text-xl mb-4 opacity-90 uppercase">
+                                <span id="player-status">PAUSED</span>
+                                <span id="player-time">0:00</span>
+                            </div>
+                            <div class="font-led flex flex-col justify-center flex-1">
+                                <div id="player-author" class="text-3xl opacity-80 uppercase leading-none truncate mb-1">SELECT TRACK</div>
+                                <div id="player-song" class="text-[2.5rem] font-bold uppercase leading-[1.1] line-clamp-2">_</div>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between items-center w-full mt-2">
+                            
+                            <div class="flex items-center gap-2 shrink-0">
+                                <span class="text-gray-400 text-[10px]" aria-hidden="true">🔈</span>
+                                <div 
+                                    id="volume-knob" 
+                                    class="w-16 h-16 rounded-full bg-neo shadow-neo-btn flex items-center justify-center relative cursor-pointer touch-none focus:outline-none focus-visible:ring-4 focus-visible:ring-[#FF5722]/50" 
+                                    role="slider"
+                                    tabindex="0"
+                                    aria-label="Гучність"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                    aria-valuenow="50"
+                                >
+                                    <div id="volume-indicator" class="absolute w-full h-full pointer-events-none" style="transform: rotate(0deg);">
+                                        <div class="absolute w-[6px] h-[6px] bg-[#FF5722] rounded-full top-[10px] left-[calc(50%-3px)] shadow-[0_0_5px_rgba(255,87,34,0.8)]"></div>
+                                    </div>
+                                </div>
+                                <span class="text-gray-400 text-xs" aria-hidden="true">🔊</span>
+                            </div>
+
+                            <div class="flex gap-4 shrink-0">
+                                <button id="btn-player-prev" type="button" class="w-12 h-12 rounded-full bg-neo shadow-neo-btn flex items-center justify-center text-gray-400 hover:text-gray-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-400" aria-label="Попередня пісня">
+                                    <svg class="w-4 h-4 fill-current -ml-0.5" viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+                                </button>
+                                
+                                <button id="btn-player-play" type="button" class="w-12 h-12 rounded-full bg-neo shadow-neo-btn flex items-center justify-center text-gray-400 hover:text-gray-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-400" aria-label="Відтворити / Пауза" aria-pressed="false">
+                                    <svg id="icon-play" class="w-5 h-5 fill-current ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                    <svg id="icon-pause" class="w-5 h-5 fill-current hidden" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                                </button>
+                                
+                                <button id="btn-player-next" type="button" class="w-12 h-12 rounded-full bg-neo shadow-neo-btn flex items-center justify-center text-gray-400 hover:text-gray-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-400" aria-label="Наступна пісня">
+                                    <svg class="w-4 h-4 fill-current ml-0.5" viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-[300px] h-[350px] shrink-0 pl-2">
+                        <ul id="playlist-container" class="h-full overflow-y-auto custom-scrollbar pr-2 flex flex-col gap-2">
+                            </ul>
+                    </div>
+
+                </div>
+            </section>
+            <!-- Модальне вікно та Світлофор -->
+            <section aria-labelledby="interactive-heading" class="section-card bg-white p-6 rounded-lg shadow-sm flex flex-col items-center justify-center text-center h-full min-h-[200px]">
+                <h2 id="interactive-heading" class="sr-only">Інтерактивний блок</h2>
+                
+                <p class="text-gray-600 mb-6">Натисніть кнопку нижче, щоб відкрити модальне вікно зі світлофором.</p>
+                <button 
+                    id="btn-open-traffic-modal" 
+                    type="button"
+                    class="btn-primary bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 focus:outline-none shadow-md"
+                    aria-haspopup="dialog"
+                    aria-controls="traffic-light-modal"
+                >
+                    Відкрити світлофор
+                </button>
+            </section>
+
+        </main>
+
+      <dialog 
+            id="traffic-light-modal" 
+            class="p-0 bg-transparent border-0 backdrop:bg-black/60 backdrop:backdrop-blur-sm shadow-2xl rounded-2xl max-w-sm w-full m-auto open:animate-in open:fade-in open:zoom-in-95"
+            aria-labelledby="modal-title"
+        >
+            <div class="bg-gray-800 text-white p-6 rounded-2xl border border-gray-700 relative">
+                
+                <header class="flex justify-between items-center mb-6">
+                    <h2 id="modal-title" class="text-xl font-bold tracking-wide text-gray-200">Світлофор</h2>
+                    <button 
+                        id="btn-close-traffic-modal" 
+                        type="button"
+                        class="text-gray-400 hover:text-white p-1 rounded-md transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white bg-gray-700 hover:bg-gray-600"
+                        aria-label="Закрити модальне вікно"
+                    >
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </header>
+
+                <div class="flex flex-col items-center gap-6">
+                    <div class="bg-gray-900 p-4 rounded-3xl border-4 border-gray-950 flex flex-col gap-4 shadow-inner">
+                        <button 
+                            type="button"
+                            id="light-red" 
+                            data-active="false" 
+                            aria-pressed="false"
+                            aria-label="Увімкнути червоний сигнал"
+                            class="cursor-pointer focus:outline-none focus-visible:ring-4 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 w-16 h-16 rounded-full transition-all duration-300 bg-red-950 opacity-40 data-[active=true]:opacity-100 data-[active=true]:bg-red-500 data-[active=true]:shadow-[0_0_25px_rgba(239,68,68,0.8)] border-2 border-black/50"
+                        ></button>
+                        
+                        <button 
+                            type="button"
+                            id="light-yellow" 
+                            data-active="false" 
+                            aria-pressed="false"
+                            aria-label="Увімкнути жовтий сигнал"
+                            class="cursor-pointer focus:outline-none focus-visible:ring-4 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 w-16 h-16 rounded-full transition-all duration-300 bg-yellow-950 opacity-40 data-[active=true]:opacity-100 data-[active=true]:bg-yellow-400 data-[active=true]:shadow-[0_0_25px_rgba(250,204,21,0.8)] border-2 border-black/50"
+                        ></button>
+                        
+                        <button 
+                            type="button"
+                            id="light-green" 
+                            data-active="false" 
+                            aria-pressed="false"
+                            aria-label="Увімкнути зелений сигнал"
+                            class="cursor-pointer focus:outline-none focus-visible:ring-4 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 w-16 h-16 rounded-full transition-all duration-300 bg-green-950 opacity-40 data-[active=true]:opacity-100 data-[active=true]:bg-green-500 data-[active=true]:shadow-[0_0_25px_rgba(34,197,94,0.8)] border-2 border-black/50"
+                        ></button>
+                    </div>
+
+                    <div id="traffic-light-status" class="sr-only" aria-live="polite">Світлофор вимкнено</div>
+
+                    <button 
+                        type="button"
+                        id="btn-next-color" 
+                        class="w-full bg-blue-600 text-white px-4 py-3 rounded-xl font-bold hover:bg-blue-500 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-800"
+                    >
+                        Наступний колір
+                    </button>
+                </div>
+            </div>
+        </dialog>
+
+        <script type="module" src="/src/js/main.js"></script>
+    </body>
+</html>

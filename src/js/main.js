@@ -8,6 +8,7 @@ import { initLoopsConditions } from './modules/loops-conditions.js';
 import { initFunctionsData } from './modules/functionsData.js';
 import { initObjectsData } from './modules/objectsData.js';
 import { initArraysData } from './modules/arraysData.js';
+import { initDomData } from './modules/domData.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'functions': initFunctionsData,
     'objects': initObjectsData,
     'arrays': initArraysData,
+    'dom': initDomData,
   };
 
   const initPage = pageModules[page];
