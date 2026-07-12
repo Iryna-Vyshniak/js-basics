@@ -156,100 +156,115 @@
         </button>
       </div>
     </header>
-    <dialog id="nav-modal" class="dialog-dropdown bg-white p-0 shadow-xl border-0">
-      <div class="max-w-5xl mx-auto w-full">
-        <div class="py-4 px-4 sm:px-6 border-b flex justify-between items-center bg-gray-50">
-          <h2 class="text-lg font-bold text-gray-800">Навігація</h2>
-          <button
-            id="btn-close-modal"
-            class="p-2 -mr-2 text-gray-500 hover:text-red-500 transition-colors rounded-md focus-visible:ring-2 focus-visible:ring-red-500 focus:outline-none"
-            aria-label="Close menu"
-          >
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"
-              ></path>
-            </svg>
-          </button>
-        </div>
+    <dialog
+            id="nav-modal"
+            class="dialog-dropdown bg-white p-0 shadow-xl border-0"
+        >
+            <div class="max-w-5xl mx-auto w-full">
+                <div class="py-4 px-4 sm:px-6 border-b flex justify-between items-center bg-gray-50">
+                    <h2 class="text-lg font-bold text-gray-800">Навігація</h2>
+                    <button
+                        id="btn-close-modal"
+                        class="p-2 -mr-2 text-gray-500 hover:text-red-500 transition-colors rounded-md focus-visible:ring-2 focus-visible:ring-red-500 focus:outline-none"
+                        aria-label="Close menu"
+                    >
+                        <svg
+                            class="w-6 h-6"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"
+                            ></path>
+                        </svg>
+                    </button>
+                </div>
 
-        <nav class="py-4 px-4 sm:px-6" aria-label="Modal navigation">
-          <ul class="space-y-2">
-            <li>
-              <a
-                href="/"
-                class="block p-4 border rounded hover:border-primary hover:bg-primary-50 transition-colors focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
-              >
-                <span class="font-bold block">Основи JS</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="/src/pages/basics-data-types.html"
-                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
-                aria-current="page"
-              >
-                <span class="font-bold block text-primary-800">Типи даних та оператори</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="/src/pages/loops-conditions.html"
-                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
-                aria-current="page"
-              >
-                <span class="font-bold block text-primary-800">Цикли й умови</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="/src/pages/functions.html"
-                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
-                aria-current="page"
-              >
-                <span class="font-bold block text-primary-800">Функції</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="/src/pages/objects.html"
-                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
-                aria-current="page"
-              >
-                <span class="font-bold block text-primary-800">Об'єкти</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="/src/pages/arrays.html"
-                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
-                aria-current="page"
-              >
-                <span class="font-bold block text-primary-800">Масиви</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="/src/pages/dom.html"
-                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
-                aria-current="page"
-              >
-                <span class="font-bold block text-primary-800">Робота з DOM</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </dialog>
+                <nav
+                    class="py-4 px-4 sm:px-6"
+                    aria-label="Modal navigation"
+                >
+                    <ul class="space-y-2">
+                        <li>
+                            <a
+                                href="/"
+                                class="block p-4 border rounded hover:border-primary hover:bg-primary-50 transition-colors focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                            >
+                                <span class="font-bold block">Основи JS</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/src/pages/basics-data-types.html"
+                                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                                aria-current="page"
+                            >
+                                <span class="font-bold block text-primary-800">Типи даних та оператори</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/src/pages/loops-conditions.html"
+                                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                                aria-current="page"
+                            >
+                                <span class="font-bold block text-primary-800">Цикли й умови</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/src/pages/functions.html"
+                                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                                aria-current="page"
+                            >
+                                <span class="font-bold block text-primary-800">Функції</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/src/pages/objects.html"
+                                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                                aria-current="page"
+                            >
+                                <span class="font-bold block text-primary-800">Об'єкти</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/src/pages/arrays.html"
+                                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                                aria-current="page"
+                            >
+                                <span class="font-bold block text-primary-800">Масиви</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/src/pages/dom.html"
+                                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                                aria-current="page"
+                            >
+                                <span class="font-bold block text-primary-800">Робота з DOM</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/src/pages/events.html"
+                                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                                aria-current="page"
+                            >
+                                <span class="font-bold block text-primary-800">Події</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </dialog>
 
     <main class="max-w-4xl mx-auto px-4 md:px-8 pb-12 grid grid-cols-1 gap-8 items-start">
       <!-- Плейлист -->
