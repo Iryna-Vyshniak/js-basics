@@ -55,27 +55,32 @@ export const initDomData = () => {
       }
     };
 
-    const renderPlaylist = () => {
-      playlistContainer.innerHTML = playList.map((item, index) => {
-        const activeContainer = item.isPlaying ? 'shadow-neo-concave bg-[#E6E7EE]' : 'shadow-none hover:bg-white/30';
-        const activeIcon = item.isPlaying ? 'text-[#334155]' : 'text-gray-400';
-        
-        return `
-        <li class="flex items-center gap-4 cursor-pointer p-2 rounded-2xl transition-all ${activeContainer}" data-index="${index}">
-          <button type="button" class="w-10 h-10 shrink-0 rounded-full bg-neo shadow-neo-concave flex items-center justify-center ${activeIcon} focus:outline-none" tabindex="-1" aria-hidden="true">
-            ${item.isPlaying 
-              ? `<svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>`
-              : `<svg class="w-4 h-4 ml-0.5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>`}
-          </button>
-          <div class="flex flex-col overflow-hidden">
-            <span class="text-sm font-bold text-[#2C3E50] truncate">${item.author}</span>
-            <span class="text-xs text-gray-500 uppercase truncate mt-0.5">${item.song}</span>
-          </div>
-        </li>
-      `}).join('');
-    };
-
-    // --- ЛОГІКА ВІДТВОРЕННЯ ---
+const renderPlaylist = () => {
+  playlistContainer.innerHTML = playList.map((item, index) => {
+    const activeContainer = item.isPlaying ? 'shadow-neo-concave bg-neo-bg' : 'shadow-none hover:bg-white/30';
+    const activeIcon = item.isPlaying ? 'text-[#334155]' : 'text-gray-400';
+    
+    return `
+    <li class="w-full">
+      <button 
+        type="button"
+        class="w-full flex items-center gap-4 text-left p-2 rounded-2xl transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-neo-accent ${activeContainer}" 
+        data-index="${index}"
+        aria-pressed="${item.isPlaying}"
+      >
+        <div class="w-10 h-10 shrink-0 rounded-full bg-neo-bg shadow-neo-concave flex items-center justify-center ${activeIcon}" aria-hidden="true">
+          ${item.isPlaying 
+            ? `<svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>`
+            : `<svg class="w-4 h-4 ml-0.5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>`}
+        </div>
+        <div class="flex flex-col overflow-hidden">
+          <span class="text-sm font-bold text-[#2C3E50] truncate">${item.author}</span>
+          <span class="text-xs text-gray-500 uppercase truncate mt-0.5">${item.song}</span>
+        </div>
+      </button>
+    </li>
+  `}).join('');
+};
 
     const playTrack = (index) => {
       playList.forEach(item => item.isPlaying = false);
@@ -211,18 +216,17 @@ export const initDomData = () => {
     if (btnPlayerNext) btnPlayerNext.addEventListener('click', playNext);
     if (btnPlayerPrev) btnPlayerPrev.addEventListener('click', playPrev);
 
-    playlistContainer.addEventListener('click', (e) => {
-      const li = e.target.closest('li[data-index]');
-      if (!li) return;
+   playlistContainer.addEventListener('click', (e) => {
+  const btn = e.target.closest('button[data-index]');
+  if (!btn) return;
 
-      const index = parseInt(li.dataset.index, 10);
-      if (currentTrackIndex === index) {
-        togglePlay(); 
-      } else {
-        playTrack(index); 
-      }
-    });
-
+  const index = parseInt(btn.dataset.index, 10);
+  if (currentTrackIndex === index) {
+    togglePlay(); 
+  } else {
+    playTrack(index); 
+  }
+});
     renderPlaylist();
   }
 
