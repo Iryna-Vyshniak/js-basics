@@ -27,6 +27,7 @@ export default defineConfig({
         "objects": resolve(__dirname, 'src/pages/objects.html'),
         "arrays": resolve(__dirname, 'src/pages/arrays.html'),
         "dom": resolve(__dirname, 'src/pages/dom.html'),
+        "events": resolve(__dirname, 'src/pages/events.html'),
       },
       output: {
         chunkFileNames: 'assets/js/[name]-[hash].js',
