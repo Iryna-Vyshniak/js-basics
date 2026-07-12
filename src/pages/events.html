@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Події (Events) - JS BASICS</title>
+  </head>
+  <body data-page="events" class="bg-gray-100 text-gray-800 font-sans leading-relaxed">
+    <header
+      class="sticky top-0 z-40 w-full border-b border-gray-200/50 bg-white/95 supports-[backdrop-filter]:bg-white/70 supports-[backdrop-filter]:backdrop-blur-md mb-8"
+    >
+      <div class="max-w-4xl mx-auto w-full flex justify-between items-start px-4 md:px-8 py-4">
+        <div class="flex flex-col w-full max-w-md">
+          <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Події (Events)</h1>
+          <div class="mb-2">
+            <button
+              type="button"
+              id="btn-materials"
+              class="group flex items-center gap-1 text-sm md:text-base font-medium text-blue-700 hover:text-blue-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 rounded-sm transition-colors"
+              aria-expanded="false"
+              aria-controls="materials-content"
+            >
+              Корисні матеріали
+              <svg
+                class="w-4 h-4 transition-transform duration-300 group-aria-expanded:-rotate-180"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <div
+              id="materials-content"
+              class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-in-out"
+            >
+              <div class="overflow-hidden">
+                <ul class="py-2 mt-1 border-l-2 border-blue-200 pl-3">
+                  <li>
+                    <a
+                      href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                    >
+                      Introduction to events
+                      <span class="sr-only">(відкривається в новій вкладці)</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://javascript.info/onload-ondomcontentloaded"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                    >
+                      Document events
+                      <span class="sr-only">(відкривається в новій вкладці)</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://javascript.info/events-change-input"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                    >
+                      Events: change, input, cut, copy, paste
+                      <span class="sr-only">(відкривається в новій вкладці)</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://www.simplilearn.com/tutorials/javascript-tutorial/javascript-events"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                    >
+                      Understand JavaScript Events with Examples
+                      <span class="sr-only">(відкривається в новій вкладці)</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.youtube.com/watch?v=YiOlaiscqDY"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="block py-1.5 text-sm text-gray-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none transition-colors underline decoration-transparent hover:decoration-blue-700"
+                    >
+                      A Complete Overview of JavaScript Events - All You Need To Know (Video)
+                      <span class="sr-only">(відкривається в новій вкладці)</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-600 m-0 text-sm md:text-base">
+            Обробка подій клавіатури, миші та DOM
+          </p>
+        </div>
+        <button
+          id="btn-burger"
+          type="button"
+          class="p-2 mt-1 text-gray-600 shrink-0 hover:text-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 rounded-md transition-colors"
+          aria-label="Відкрити меню навігації"
+          aria-expanded="false"
+          aria-controls="nav-modal"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <dialog id="nav-modal" class="dialog-dropdown bg-white p-0 shadow-xl border-0">
+      <div class="max-w-5xl mx-auto w-full">
+        <div class="py-4 px-4 sm:px-6 border-b flex justify-between items-center bg-gray-50">
+          <h2 class="text-lg font-bold text-gray-800">Навігація</h2>
+          <button
+            id="btn-close-modal"
+            class="p-2 -mr-2 text-gray-500 hover:text-red-500 transition-colors rounded-md focus-visible:ring-2 focus-visible:ring-red-500 focus:outline-none"
+            aria-label="Close menu"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <nav class="py-4 px-4 sm:px-6" aria-label="Modal navigation">
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="/"
+                class="block p-4 border rounded hover:border-primary hover:bg-primary-50 transition-colors focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+              >
+                <span class="font-bold block">Основи JS</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/src/pages/basics-data-types.html"
+                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                aria-current="page"
+              >
+                <span class="font-bold block text-primary-800">Типи даних та оператори</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/src/pages/loops-conditions.html"
+                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                aria-current="page"
+              >
+                <span class="font-bold block text-primary-800">Цикли й умови</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/src/pages/functions.html"
+                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                aria-current="page"
+              >
+                <span class="font-bold block text-primary-800">Функції</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/src/pages/objects.html"
+                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                aria-current="page"
+              >
+                <span class="font-bold block text-primary-800">Об'єкти</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/src/pages/arrays.html"
+                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                aria-current="page"
+              >
+                <span class="font-bold block text-primary-800">Масиви</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/src/pages/dom.html"
+                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                aria-current="page"
+              >
+                <span class="font-bold block text-primary-800">Робота з DOM</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/src/pages/events.html"
+                class="block p-4 border rounded transition-colors bg-primary-50 border-primary-200 hover:border-primary focus-visible:ring-2 focus-visible:ring-primary focus:outline-none"
+                aria-current="page"
+              >
+                <span class="font-bold block text-primary-800">Події</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </dialog>
+    <main class="max-w-4xl mx-auto px-4 md:px-8 pb-12 space-y-8">
+      <!-- Текстовий редактор -->
+      <section
+        aria-labelledby="min-heading"
+        class="bg-white rounded-lg shadow-sm border border-gray-200 p-6"
+      >
+        <h2 id="min-heading" class="text-2xl font-semibold mb-4 border-b pb-2">
+          1. Текстовий редактор (Ctrl+E / Ctrl+S)
+        </h2>
+        <div class="mb-4 text-sm text-gray-600">
+          <p>
+            Натисніть
+            <kbd class="px-2 py-1 bg-gray-100 border rounded font-mono text-xs">Ctrl + E</kbd> (або
+            Cmd+E), щоб редагувати.
+            <kbd class="px-2 py-1 bg-gray-100 border rounded font-mono text-xs">Ctrl + S</kbd> (або
+            Cmd+S), щоб зберегти.
+          </p>
+        </div>
+
+        <div class="relative">
+          <div id="editor-status" class="sr-only" aria-live="polite">Режим перегляду</div>
+
+          <div
+            id="text-view"
+            class="p-4 border-2 border-transparent bg-gray-50 rounded-md min-h-[120px] whitespace-pre-wrap transition-colors hover:bg-gray-100"
+          >
+            Це початковий текст, який можна відредагувати. Натисніть комбінацію клавіш, щоб почати.
+          </div>
+
+          <label for="text-input" class="sr-only">Редагування тексту</label>
+          <textarea
+            id="text-input"
+            class="hidden w-full p-4 border-2 border-primary rounded-md min-h-[120px] focus:outline-none focus:ring-4 focus:ring-primary-200 resize-y"
+          ></textarea>
+        </div>
+      </section>
+
+      <!-- Сортування таблиці -->
+      <section
+        aria-labelledby="norm-heading"
+        class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 overflow-hidden"
+      >
+        <h2 id="norm-heading" class="text-2xl font-semibold mb-4 border-b pb-2">
+          2. Сортована таблиця
+        </h2>
+
+        <div class="overflow-x-auto">
+          <table id="sortable-table" class="w-full text-left border-collapse min-w-[600px]">
+            <caption class="sr-only">
+              Дані співробітників з можливістю сортування по колонках
+            </caption>
+            <thead class="bg-gray-50 border-b-2 border-gray-200">
+              <tr>
+                <th scope="col" aria-sort="none" class="p-0">
+                  <button
+                    type="button"
+                    data-type="string"
+                    data-index="0"
+                    class="w-full text-left font-semibold p-4 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:ring-inset focus:ring-2 focus:ring-primary transition-colors flex items-center justify-between group"
+                  >
+                    Ім'я
+                    <span
+                      class="text-gray-400 group-hover:text-primary transition-colors"
+                      aria-hidden="true"
+                      >↕</span
+                    >
+                  </button>
+                </th>
+                <th scope="col" aria-sort="none" class="p-0 border-l border-gray-200">
+                  <button
+                    type="button"
+                    data-type="string"
+                    data-index="1"
+                    class="w-full text-left font-semibold p-4 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:ring-inset focus:ring-2 focus:ring-primary transition-colors flex items-center justify-between group"
+                  >
+                    Посада
+                    <span
+                      class="text-gray-400 group-hover:text-primary transition-colors"
+                      aria-hidden="true"
+                      >↕</span
+                    >
+                  </button>
+                </th>
+                <th scope="col" aria-sort="none" class="p-0 border-l border-gray-200">
+                  <button
+                    type="button"
+                    data-type="number"
+                    data-index="2"
+                    class="w-full text-left font-semibold p-4 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:ring-inset focus:ring-2 focus:ring-primary transition-colors flex items-center justify-between group"
+                  >
+                    Досвід (років)
+                    <span
+                      class="text-gray-400 group-hover:text-primary transition-colors"
+                      aria-hidden="true"
+                      >↕</span
+                    >
+                  </button>
+                </th>
+                <th scope="col" aria-sort="none" class="p-0 border-l border-gray-200">
+                  <button
+                    type="button"
+                    data-type="number"
+                    data-index="3"
+                    class="w-full text-left font-semibold p-4 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:ring-inset focus:ring-2 focus:ring-primary transition-colors flex items-center justify-between group"
+                  >
+                    Зарплата ($)
+                    <span
+                      class="text-gray-400 group-hover:text-primary transition-colors"
+                      aria-hidden="true"
+                      >↕</span
+                    >
+                  </button>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr class="hover:bg-gray-50 transition-colors">
+                <td class="p-4 text-gray-900">Олена Ткачук</td>
+                <td class="p-4 text-gray-600">Frontend Developer</td>
+                <td class="p-4 text-right tabular-nums text-gray-600">
+                  3 <span class="sr-only">роки досвіду</span>
+                </td>
+                <td class="p-4 text-right tabular-nums font-medium text-gray-900">$2,800</td>
+              </tr>
+              <tr class="hover:bg-gray-50 transition-colors">
+                <td class="p-4 text-gray-900">Максим Гаврилюк</td>
+                <td class="p-4 text-gray-600">Backend Developer</td>
+                <td class="p-4 text-right tabular-nums text-gray-600">
+                  5 <span class="sr-only">років досвіду</span>
+                </td>
+                <td class="p-4 text-right tabular-nums font-medium text-gray-900">$5,200</td>
+              </tr>
+              <tr class="hover:bg-gray-50 transition-colors">
+                <td class="p-4 text-gray-900">Дарина Коваль</td>
+                <td class="p-4 text-gray-600">UI/UX Designer</td>
+                <td class="p-4 text-right tabular-nums text-gray-600">
+                  2 <span class="sr-only">роки досвіду</span>
+                </td>
+                <td class="p-4 text-right tabular-nums font-medium text-gray-900">$1,500</td>
+              </tr>
+              <tr class="hover:bg-gray-50 transition-colors">
+                <td class="p-4 text-gray-900">Андрій Литвин</td>
+                <td class="p-4 text-gray-600">Project Manager</td>
+                <td class="p-4 text-right tabular-nums text-gray-600">
+                  8 <span class="sr-only">років досвіду</span>
+                </td>
+                <td class="p-4 text-right tabular-nums font-medium text-gray-900">$4,600</td>
+              </tr>
+              <tr class="hover:bg-gray-50 transition-colors">
+                <td class="p-4 text-gray-900">Ірина Вишняк</td>
+                <td class="p-4 text-gray-600">Junior Frontend</td>
+                <td class="p-4 text-right tabular-nums text-gray-600">
+                  1 <span class="sr-only">рік досвіду</span>
+                </td>
+                <td class="p-4 text-right tabular-nums font-medium text-gray-900">$1,000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!--  Блок зі зміною розмірів -->
+      <section
+        aria-labelledby="max-heading"
+        class="bg-white rounded-lg shadow-sm border border-gray-200 p-6"
+      >
+        <h2 id="max-heading" class="text-2xl font-semibold mb-4 border-b pb-2">
+          3. Кастомний Resizer (JS)
+        </h2>
+        <p class="text-sm text-gray-600 mb-6">
+          CSS <code>resize: both</code> є кращим варіантом, але тут реалізована JS-логіка за
+          вимогами.
+        </p>
+
+        <div class="bg-gray-50 border border-gray-200 rounded-lg p-8">
+          <div
+            id="resizable-box"
+            class="relative bg-white border-2 border-primary-200 shadow-sm p-4 min-w-[200px] min-h-[150px] max-w-full"
+            style="width: 300px; height: 200px"
+          >
+            <h3 class="font-bold text-gray-800 mb-2 select-none">Зміни мій розмір</h3>
+            <p class="text-gray-600 text-sm select-none">
+              Потягніть за правий нижній куток, щоб змінити габарити цього контейнера.
+            </p>
+
+            <!-- Ресайзер -->
+            <div
+              id="resizer-handle"
+              class="absolute bottom-0 right-0 w-6 h-6 bg-primary cursor-se-resize flex items-center justify-center rounded-tl-md transition-colors hover:bg-primary-hover active:bg-primary-800 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1"
+              role="separator"
+              aria-label="Ручка для зміни розміру блоку"
+              tabindex="0"
+            >
+              <svg
+                class="w-4 h-4 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 15l6 6m0 0l-6 0m6 0v-6"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>
