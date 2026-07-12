@@ -9,6 +9,7 @@ import { initFunctionsData } from './modules/functionsData.js';
 import { initObjectsData } from './modules/objectsData.js';
 import { initArraysData } from './modules/arraysData.js';
 import { initDomData } from './modules/domData.js';
+import { initEventsData } from './modules/events.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'objects': initObjectsData,
     'arrays': initArraysData,
     'dom': initDomData,
+    'events': initEventsData,
   };
 
   const initPage = pageModules[page];
