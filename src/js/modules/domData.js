@@ -1,16 +1,26 @@
+
+import trackLedZeppelin from '/src/assets/audio/Led_Zeppelin-Stairway_To_Heaven-spaces.im.mp3';
+import trackQueen1 from '/src/assets/audio/bohemian_rhapsody_Queen-Bohemian-Rhapsody.mp3';
+import trackLynyrd from '/src/assets/audio/Lynyrd-Skynyrd-FreeBird.mp3';
+import trackDeepPurple from '/src/assets/audio/Deep_Purple-Smoke_On_The_Water_(1971)-spaces.im.mp3';
+import trackHendrix from '/src/assets/audio/Jimi-Hendrix-All-Along-The-Watchtower.mp3';
+import trackACDC from '/src/assets/audio/ACDC-Back_In_Black-spaces.im.mp3';
+import trackQueen2 from '/src/assets/audio/We-Will-Rock-You-By-Queen-.mp3';
+import trackMetallica from '/src/assets/audio/Metallica-Enter_Sandman-spaces.im.mp3';
+
 export const initDomData = () => {
   // ==========================================
   // ЗАВДАННЯ 1: Плейлист
   // ==========================================
   const playList = [
-    { author: "LED ZEPPELIN", song: "STAIRWAY TO HEAVEN", isPlaying: false, file: "/src/assets/audio/Led_Zeppelin-Stairway_To_Heaven-spaces.im.mp3"},
-    { author: "QUEEN", song: "BOHEMIAN RHAPSODY", isPlaying: false, file: "/src/assets/audio/bohemian_rhapsody_Queen-Bohemian-Rhapsody.mp3" },
-    { author: "LYNYRD SKYNYRD", song: "FREE BIRD", isPlaying: false, file: "/src/assets/audio/Lynyrd-Skynyrd-FreeBird.mp3" },
-    { author: "DEEP PURPLE", song: "SMOKE ON THE WATER", isPlaying: false, file: "/src/assets/audio/Deep_Purple-Smoke_On_The_Water_(1971)-spaces.im.mp3" },
-    { author: "JIMI HENDRIX", song: "ALL ALONG THE WATCHTOWER", isPlaying: false, file: "/src/assets/audio/Jimi-Hendrix-All-Along-The-Watchtower.mp3" },
-    { author: "AC/DC", song: "BACK IN BLACK", isPlaying: false, file: "/src/assets/audio/ACDC-Back_In_Black-spaces.im.mp3" },
-    { author: "QUEEN", song: "WE WILL ROCK YOU", isPlaying: false, file: "/src/assets/audio/We-Will-Rock-You-By-Queen-.mp3"},
-    { author: "METALLICA", song: "ENTER SANDMAN", isPlaying: false, file: "/src/assets/audio/Metallica-Enter_Sandman-spaces.im.mp3" }
+    { author: "LED ZEPPELIN", song: "STAIRWAY TO HEAVEN", isPlaying: false, file: trackLedZeppelin },
+    { author: "QUEEN", song: "BOHEMIAN RHAPSODY", isPlaying: false, file: trackQueen1 },
+    { author: "LYNYRD SKYNYRD", song: "FREE BIRD", isPlaying: false, file: trackLynyrd },
+    { author: "DEEP PURPLE", song: "SMOKE ON THE WATER", isPlaying: false, file: trackDeepPurple },
+    { author: "JIMI HENDRIX", song: "ALL ALONG THE WATCHTOWER", isPlaying: false, file: trackHendrix },
+    { author: "AC/DC", song: "BACK IN BLACK", isPlaying: false, file: trackACDC },
+    { author: "QUEEN", song: "WE WILL ROCK YOU", isPlaying: false, file: trackQueen2 },
+    { author: "METALLICA", song: "ENTER SANDMAN", isPlaying: false, file: trackMetallica }
   ];
 
   const playlistContainer = document.getElementById('playlist-container');
